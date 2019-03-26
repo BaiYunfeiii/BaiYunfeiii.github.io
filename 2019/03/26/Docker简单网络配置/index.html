@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Docker简单网络配置 | YUNFEI&#39;s BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="总览 Host Network Brigde Network Overlay Network  Host Network与主机共享网络资源，与其他采用Host Network的机器存在资源竞争 PS：Host可以绑定多个IP Bridge连接到同一个Bridge的容器，可以通过容器名访问彼此 Default Bridge 与 User-defined Bridge 的区别 Overlay主要与Do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker简单网络配置">
+<meta property="og:url" content="http://yoursite.com/2019/03/26/Docker简单网络配置/index.html">
+<meta property="og:site_name" content="YUNFEI&#39;s BLOG">
+<meta property="og:description" content="总览 Host Network Brigde Network Overlay Network  Host Network与主机共享网络资源，与其他采用Host Network的机器存在资源竞争 PS：Host可以绑定多个IP Bridge连接到同一个Bridge的容器，可以通过容器名访问彼此 Default Bridge 与 User-defined Bridge 的区别 Overlay主要与Do">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-26T03:17:26.111Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker简单网络配置">
+<meta name="twitter:description" content="总览 Host Network Brigde Network Overlay Network  Host Network与主机共享网络资源，与其他采用Host Network的机器存在资源竞争 PS：Host可以绑定多个IP Bridge连接到同一个Bridge的容器，可以通过容器名访问彼此 Default Bridge 与 User-defined Bridge 的区别 Overlay主要与Do">
+  
+    <link rel="alternate" href="/atom.xml" title="YUNFEI&#39;s BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YUNFEI&#39;s BLOG</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Docker简单网络配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/26/Docker简单网络配置/" class="article-date">
+  <time datetime="2019-03-26T02:58:51.000Z" itemprop="datePublished">2019-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Docker简单网络配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><ol>
+<li>Host Network</li>
+<li>Brigde Network</li>
+<li>Overlay Network</li>
+</ol>
+<h2 id="Host-Network"><a href="#Host-Network" class="headerlink" title="Host Network"></a>Host Network</h2><p>与主机共享网络资源，与其他采用Host Network的机器存在资源竞争</p>
+<p>PS：Host可以绑定多个IP</p>
+<h2 id="Bridge"><a href="#Bridge" class="headerlink" title="Bridge"></a>Bridge</h2><p>连接到同一个Bridge的容器，可以通过容器名访问彼此</p>
+<p>Default Bridge 与 User-defined Bridge 的区别</p>
+<h2 id="Overlay"><a href="#Overlay" class="headerlink" title="Overlay"></a>Overlay</h2><p>主要与Docker swarm结合使用，用于多个Host上的容器互相通信</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/26/Docker简单网络配置/" data-id="cjtp6yw7s0001vbzqs7e2f481" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/26/Docker简单网络配置/">Docker简单网络配置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/26/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yunfei Bai<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
