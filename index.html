@@ -62,6 +62,100 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux-常用操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/22/Linux-常用操作/" class="article-date">
+  <time datetime="2019-04-22T06:49:19.000Z" itemprop="datePublished">2019-04-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DevOps/">DevOps</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/22/Linux-常用操作/">Linux 常用操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="时区"><a href="#时区" class="headerlink" title="时区"></a>时区</h1><ol>
+<li>修改时区<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo unlink /etc/localtime</span><br><span class="line">sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>使用<code>ls /usr/share/zoneinfo</code>中查看所有支持的时区</p>
+<blockquote>
+<p><a href="https://unix.stackexchange.com/questions/110522/timezone-setting-in-linux" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/110522/timezone-setting-in-linux</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/22/Linux-常用操作/" data-id="cjus0fokn0000ry2fct5i9xm3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Virtual-Box使用Brdige网络连接多台虚拟机" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/03/27/Virtual-Box使用Brdige网络连接多台虚拟机/" class="article-date">
+  <time datetime="2019-03-27T02:52:32.000Z" itemprop="datePublished">2019-03-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/27/Virtual-Box使用Brdige网络连接多台虚拟机/">Virtual Box使用Brdige网络连接多台虚拟机</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>Settings &gt; Network, Attach To “Bridge Adapter”, Name “eth0”</li>
+<li><p>Set ip address for each VM.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip address add 192.168.0.1/24 dev enp0s3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Set ip address for Host, which is in the same sub network with VMs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip address add 192.168.0.254/24 dev en0</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/03/27/Virtual-Box使用Brdige网络连接多台虚拟机/" data-id="cjus0fokx0005ry2fpyzqb3gp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Docker简单网络配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/03/26/Docker简单网络配置/" class="article-date">
@@ -98,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/26/Docker简单网络配置/" data-id="cjtp86yua0000nfzqamak4efk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/26/Docker简单网络配置/" data-id="cjus0fokw0004ry2fmyv43x5g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -143,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/26/hello-world/" data-id="cjtp86yue0001nfzqy1qh3qdr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/03/26/hello-world/" data-id="cjus0fokr0001ry2ffc1g69b7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,18 +254,39 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevOps/">DevOps</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
     </div>
   </div>
 
@@ -182,6 +297,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/04/22/Linux-常用操作/">Linux 常用操作</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/27/Virtual-Box使用Brdige网络连接多台虚拟机/">Virtual Box使用Brdige网络连接多台虚拟机</a>
+          </li>
         
           <li>
             <a href="/2019/03/26/Docker简单网络配置/">Docker简单网络配置</a>
