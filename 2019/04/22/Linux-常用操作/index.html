@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="YUNFEI&#39;s BLOG">
 <meta property="og:description" content="时区操作修改时区12sudo unlink /etc/localtimesudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 使用ls /usr/share/zoneinfo中查看所有支持的时区  参考 https://unix.stackexchange.com/questions/110522/timezone-setting-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-22T07:02:44.270Z">
+<meta property="og:updated_time" content="2019-05-22T15:17:04.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用操作">
 <meta name="twitter:description" content="时区操作修改时区12sudo unlink /etc/localtimesudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 使用ls /usr/share/zoneinfo中查看所有支持的时区  参考 https://unix.stackexchange.com/questions/110522/timezone-setting-">
@@ -96,11 +96,18 @@
 <blockquote>
 <p>参考 <a href="https://unix.stackexchange.com/questions/110522/timezone-setting-in-linux" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/110522/timezone-setting-in-linux</a></p>
 </blockquote>
+<h2 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h2><h3 id="配置免密登陆"><a href="#配置免密登陆" class="headerlink" title="配置免密登陆"></a>配置免密登陆</h3><ol>
+<li><p>生成SSH Key</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将SSH Key传到目标服务器上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i ~/.ssh/id_rsa.pub cloud_user@yfbai1c.mylabserver.com</span><br></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/22/Linux-常用操作/" data-id="cjus0hcka0003ti2fr20hxmby" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/22/Linux-常用操作/" data-id="ck2ocsaai0004x02fnwrnzyzs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
@@ -110,6 +117,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2019/05/21/基于CentOS-搭建Kubernetes集群/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          基于CentOS 搭建Kubernetes集群
+        
+      </div>
+    </a>
   
   
     <a href="/2019/03/27/Virtual-Box使用Brdige网络连接多台虚拟机/" id="article-nav-older" class="article-nav-link-wrap">
@@ -140,7 +156,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Container/">Container</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Devops/">Devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
     </div>
   </div>
 
@@ -150,7 +166,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a>
+      <a href="/tags/Container/" style="font-size: 10px;">Container</a> <a href="/tags/DevOps/" style="font-size: 20px;">DevOps</a> <a href="/tags/Devops/" style="font-size: 10px;">Devops</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a>
     </div>
   </div>
 
@@ -159,7 +175,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
     </div>
   </div>
 
@@ -172,6 +188,14 @@
       <ul>
         
           <li>
+            <a href="/2019/11/07/Ansible/">Ansible</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/21/基于CentOS-搭建Kubernetes集群/">基于CentOS 搭建Kubernetes集群</a>
+          </li>
+        
+          <li>
             <a href="/2019/04/22/Linux-常用操作/">Linux 常用操作</a>
           </li>
         
@@ -181,10 +205,6 @@
         
           <li>
             <a href="/2019/03/26/Docker简单网络配置/">Docker简单网络配置</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/26/hello-world/">Hello World</a>
           </li>
         
       </ul>
